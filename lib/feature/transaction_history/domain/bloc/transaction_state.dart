@@ -1,11 +1,11 @@
-// part of 'contacts_bloc.dart';
-//
-// @freezed
-// abstract class ContactsState with _$ContactsState {
-//   const factory ContactsState.initial() = _ContactsInitialState;
-//
-//   const factory ContactsState.received({
-//     required List<Contact> usaContacts,
-//     required List<Contact> gbContacts,
-//   }) = _ContactsReceivedState;
-// }
+part of 'transaction_bloc.dart';
+
+@freezed
+abstract class TransactionState with _$TransactionState {
+  const factory TransactionState.initial() = _TransactionInitialState;
+
+  const factory TransactionState.received({
+    required List<Transaction> transactions,
+
+  }) = _TransactionReceivedState;
+}

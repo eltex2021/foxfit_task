@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:foxfit_task/feature/transaction_history/presentation/components/transitions_widget.dart';
 
 import 'package:foxfit_task/theme/text_theme.dart';
 
@@ -14,8 +15,6 @@ class TransactionHistory extends StatefulWidget {
 }
 
 class _TransactionHistoryState extends State<TransactionHistory> {
- // String? _value;
-
   final List<String> items1 = [
     'Crypto',
     'Money',
@@ -77,7 +76,10 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
-                          child: CustomDropdownButton(items: items2,textStyle: AppTexts.segoeWhite16,),
+                          child: CustomDropdownButton(
+                            items: items2,
+                            textStyle: AppTexts.segoeWhite16,
+                          ),
                           height: 49,
                           width: MediaQuery.of(context).size.width - 93,
                         ),
@@ -112,6 +114,10 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                   ),
                 ],
               )),
+          const TransitionsWidget(day: 'Yesterday'),
+          const TransitionsWidget(day: 'Monday'),
+          const TransitionsWidget(day: 'Wednesday'),
+          const TransitionsWidget(day: 'Thursday, Dec 9, 2021'),
         ],
       ),
     );

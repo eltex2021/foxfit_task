@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:foxfit_task/feature/home/home_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
+import 'feature/transaction_history/domain/bloc/transaction_bloc.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,13 +13,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'FoxFit Task',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+    return BlocProvider<TransactionBloc>(
+      create: (context) => TransactionBloc()..add(const TransactionInitialEvent()),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'FoxFit Task',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: BlocProvider<TransactionBloc>(
+          create: (context) =>
+          TransactionBloc()
+            ..add(const TransactionInitialEvent()),
+          child: const HomeScreen(),
+        ),
       ),
-      home: const HomeScreen(),
     );
   }
 }

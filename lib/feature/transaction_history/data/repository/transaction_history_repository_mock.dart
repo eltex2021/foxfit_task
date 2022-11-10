@@ -23,7 +23,7 @@ class TransactionHistoryRepositoryMockRepository
           date: '1/24/2022',
           invoiceAmount: '+ \$44,978.25',
           typeTransaction: 'Buy',
-          name: 'Buy'),
+          name: 'BTC'),
       const Transaction(
           transactionAmount: '- 10.00 DOT',
           date: '1/24/2022',
