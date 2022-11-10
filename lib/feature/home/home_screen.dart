@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foxfit_task/feature/transaction_history/transaction_history_screen.dart';
+import 'package:foxfit_task/feature/transaction_history/presentation/transaction_history_screen.dart';
 import 'package:foxfit_task/theme/text_theme.dart';
 
 class HomeScreen extends StatelessWidget {
