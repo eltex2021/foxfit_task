@@ -15,18 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider<TransactionBloc>(
       create: (context) => TransactionBloc()..add(const TransactionInitialEvent()),
-      child: MaterialApp(
+      child: const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'FoxFit Task',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: BlocProvider<TransactionBloc>(
-          create: (context) =>
-          TransactionBloc()
-            ..add(const TransactionInitialEvent()),
-          child: const HomeScreen(),
-        ),
+        home: HomeScreen(),
       ),
     );
   }

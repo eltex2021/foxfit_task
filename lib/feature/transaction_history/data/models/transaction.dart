@@ -1,8 +1,7 @@
-
-
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'transaction.freezed.dart';
+
 part 'transaction.g.dart';
 
 @freezed
@@ -15,6 +14,6 @@ class Transaction with _$Transaction {
     required String invoiceAmount,
   }) = _Transaction;
 
-  factory Transaction.fromJson(Map<String, Object?> json)
-  => _$TransactionFromJson(json);
+  factory Transaction.fromJson(Map<String, Object?> json) =>
+      _$TransactionFromJson(json);
 }

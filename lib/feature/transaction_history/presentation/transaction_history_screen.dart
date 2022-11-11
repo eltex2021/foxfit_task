@@ -5,7 +5,8 @@ import 'package:foxfit_task/feature/transaction_history/presentation/components/
 import 'package:foxfit_task/theme/text_theme.dart';
 
 import '../../../theme/color_theme.dart';
-import 'components/dropdownButton.dart';
+import 'components/first_drop_down_button_widget.dart';
+import 'components/second_drop_down_button_widget.dart';
 
 class TransactionHistory extends StatefulWidget {
   const TransactionHistory({Key? key}) : super(key: key);
@@ -53,71 +54,11 @@ class _TransactionHistoryState extends State<TransactionHistory> {
               color: AppColors.blackFon,
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 16,
-                      top: 5.5,
-                      bottom: 11,
-                      right: 16,
-                    ),
-                    child: CustomDropdownButton(
-                      items: items1,
-                      textStyle: AppTexts.segoeWhite35,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      left: 16,
-                      //top: 5.5,
-                      bottom: 14.5,
-                      right: 16,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          child: CustomDropdownButton(
-                            items: items2,
-                            textStyle: AppTexts.segoeWhite16,
-                          ),
-                          height: 49,
-                          width: MediaQuery.of(context).size.width - 93,
-                        ),
-                        GestureDetector(
-                          onTap: () {
-                            print('тап календарь');
-                          },
-                          child: Container(
-                            child: Padding(
-                              padding: const EdgeInsets.all(15),
-                              child: SvgPicture.asset(
-                                'assets/svg_icons/calendar.svg',
-                                color: AppColors.white,
-                              ),
-                            ),
-                            height: 49,
-                            width: 50,
-                            decoration: BoxDecoration(
-                              color: AppColors.blackFon,
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(10)),
-                              border: Border.all(
-                                color: AppColors.white,
-                                width: 1,
-                              ),
-                            ),
-                          ),
-                        ),
-                        //CustomDropdownButton(),
-                      ],
-                    ),
-                  ),
+                  FirstDropDownButtonWidget(items1: items1),
+                  SecondDropDownButtonWidget(items2: items2),
                 ],
               )),
-          const TransitionsWidget(day: 'Yesterday'),
-          const TransitionsWidget(day: 'Monday'),
-          const TransitionsWidget(day: 'Wednesday'),
-          const TransitionsWidget(day: 'Thursday, Dec 9, 2021'),
+          const TransitionsWidget(),
         ],
       ),
     );

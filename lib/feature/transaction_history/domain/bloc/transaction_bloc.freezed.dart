@@ -290,19 +290,19 @@ mixin _$TransactionState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<Transaction> transactions) received,
+    required TResult Function(List<Day> transactions) received,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<Transaction> transactions)? received,
+    TResult Function(List<Day> transactions)? received,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<Transaction> transactions)? received,
+    TResult Function(List<Day> transactions)? received,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -388,7 +388,7 @@ class _$_TransactionInitialState implements _TransactionInitialState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<Transaction> transactions) received,
+    required TResult Function(List<Day> transactions) received,
   }) {
     return initial();
   }
@@ -397,7 +397,7 @@ class _$_TransactionInitialState implements _TransactionInitialState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<Transaction> transactions)? received,
+    TResult Function(List<Day> transactions)? received,
   }) {
     return initial?.call();
   }
@@ -406,7 +406,7 @@ class _$_TransactionInitialState implements _TransactionInitialState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<Transaction> transactions)? received,
+    TResult Function(List<Day> transactions)? received,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -457,7 +457,7 @@ abstract class _$$_TransactionReceivedStateCopyWith<$Res> {
           _$_TransactionReceivedState value,
           $Res Function(_$_TransactionReceivedState) then) =
       __$$_TransactionReceivedStateCopyWithImpl<$Res>;
-  $Res call({List<Transaction> transactions});
+  $Res call({List<Day> transactions});
 }
 
 /// @nodoc
@@ -480,7 +480,7 @@ class __$$_TransactionReceivedStateCopyWithImpl<$Res>
       transactions: transactions == freezed
           ? _value._transactions
           : transactions // ignore: cast_nullable_to_non_nullable
-              as List<Transaction>,
+              as List<Day>,
     ));
   }
 }
@@ -488,13 +488,12 @@ class __$$_TransactionReceivedStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_TransactionReceivedState implements _TransactionReceivedState {
-  const _$_TransactionReceivedState(
-      {required final List<Transaction> transactions})
+  const _$_TransactionReceivedState({required final List<Day> transactions})
       : _transactions = transactions;
 
-  final List<Transaction> _transactions;
+  final List<Day> _transactions;
   @override
-  List<Transaction> get transactions {
+  List<Day> get transactions {
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_transactions);
   }
@@ -527,7 +526,7 @@ class _$_TransactionReceivedState implements _TransactionReceivedState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(List<Transaction> transactions) received,
+    required TResult Function(List<Day> transactions) received,
   }) {
     return received(transactions);
   }
@@ -536,7 +535,7 @@ class _$_TransactionReceivedState implements _TransactionReceivedState {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<Transaction> transactions)? received,
+    TResult Function(List<Day> transactions)? received,
   }) {
     return received?.call(transactions);
   }
@@ -545,7 +544,7 @@ class _$_TransactionReceivedState implements _TransactionReceivedState {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(List<Transaction> transactions)? received,
+    TResult Function(List<Day> transactions)? received,
     required TResult orElse(),
   }) {
     if (received != null) {
@@ -588,10 +587,9 @@ class _$_TransactionReceivedState implements _TransactionReceivedState {
 
 abstract class _TransactionReceivedState implements TransactionState {
   const factory _TransactionReceivedState(
-          {required final List<Transaction> transactions}) =
-      _$_TransactionReceivedState;
+      {required final List<Day> transactions}) = _$_TransactionReceivedState;
 
-  List<Transaction> get transactions;
+  List<Day> get transactions;
   @JsonKey(ignore: true)
   _$$_TransactionReceivedStateCopyWith<_$_TransactionReceivedState>
       get copyWith => throw _privateConstructorUsedError;

@@ -1,5 +1,5 @@
-import '../../data/models/transaction.dart';
+import 'package:foxfit_task/feature/transaction_history/data/models/day.dart';
 
 abstract class TransactionHistoryRepository {
-  Future<List<Transaction>> getTransactions();
+  Future<List<Day>> getTransactions();
 }
