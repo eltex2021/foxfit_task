@@ -22,7 +22,7 @@ class FirstDropDownButtonWidget extends StatelessWidget {
       ),
       child: CustomDropdownButton(
         items: items1,
-        textStyle: AppTexts.segoeWhite35,
+        textStyle: AppTexts.segoeWhite35, hintText: 'Payment type',
       ),
     );
   }

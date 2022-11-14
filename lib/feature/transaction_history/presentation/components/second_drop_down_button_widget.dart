@@ -27,7 +27,8 @@ class SecondDropDownButtonWidget extends StatelessWidget {
           SizedBox(
             child: CustomDropdownButton(
               items: items2,
-              textStyle: AppTexts.segoeWhite16,
+              textStyle: AppTexts.segoeWhite16, hintText: 'Operation type',
+
             ),
             height: 49,
             width: MediaQuery.of(context).size.width - 93,

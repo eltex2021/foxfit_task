@@ -7,10 +7,11 @@ import 'package:foxfit_task/theme/text_theme.dart';
 
 class CustomDropdownButton extends StatefulWidget {
   const CustomDropdownButton(
-      {Key? key, required this.items, required this.textStyle})
+      {Key? key, required this.items, required this.textStyle, required this.hintText})
       : super(key: key);
   final List<String> items;
   final TextStyle textStyle;
+  final String hintText;
 
   @override
   State<CustomDropdownButton> createState() => _CustomDropdownButtonState();
@@ -25,9 +26,9 @@ class _CustomDropdownButtonState extends State<CustomDropdownButton> {
       child: DropdownButtonHideUnderline(
         child: DropdownButton2(
           isExpanded: true,
-          hint: const Text(
-            'Payment type',
-            style: AppTexts.segoeWhite16,
+          hint: Text(
+            widget.hintText,
+            style: widget.textStyle,
           ),
           items: widget.items
               .map((item) => DropdownMenuItem<String>(

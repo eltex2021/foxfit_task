@@ -1,9 +1,10 @@
+
+
+import 'package:foxfit_task/feature/transaction_history/data/models/day.dart';
 import 'package:foxfit_task/feature/transaction_history/data/models/transaction.dart';
 import 'package:foxfit_task/feature/transaction_history/domain/repository/transaction_history_repository.dart';
 
-import '../models/day.dart';
-
-class TransactionHistoryRepositoryMockRepository
+class TransactionHistoryMockRepository
     implements TransactionHistoryRepository {
   @override
   Future<List<Day>> getTransactions() async {

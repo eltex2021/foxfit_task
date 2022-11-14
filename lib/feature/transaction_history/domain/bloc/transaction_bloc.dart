@@ -1,9 +1,7 @@
-import 'dart:async';
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:foxfit_task/feature/transaction_history/data/models/day.dart';
+import 'package:foxfit_task/feature/transaction_history/data/repository/transaction_history_repository_mock.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-
-import '../../data/models/day.dart';
-import '../../data/repository/transaction_history_repository_mock.dart';
 
 part 'transaction_bloc.freezed.dart';
 
@@ -15,7 +13,7 @@ class TransactionBloc extends Bloc<TransactionEvent, TransactionState> {
   List<Day> transactions = [];
 
   TransactionBloc() : super(const TransactionState.initial()) {
-    final _repo = TransactionHistoryRepositoryMockRepository();
+    final _repo = TransactionHistoryMockRepository();
     on<TransactionInitialEvent>((event, emit) {
       emit(const TransactionState.initial());
       Future.delayed(const Duration(seconds: 1)).whenComplete(() {
