@@ -20,7 +20,7 @@ class TransitionsWidget extends StatelessWidget {
           initial: () {
             return initialWidget(context);
           },
-          received: (List<Day> transactions) {
+          received: (transactions) {
             return SingleChildScrollView(
               child: Column(
                 children: [
