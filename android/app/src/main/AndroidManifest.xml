@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.foxfit_task">
    <application
-        android:label="foxfit_task"
+        android:label="Test FoxFit task"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
